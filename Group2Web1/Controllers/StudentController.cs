@@ -7,7 +7,18 @@ namespace Group2Web1.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+
+            List<Studenti> studentet = new List<Studenti>();
+
+            var studenti1 = new Studenti("Kastriot", "Gjoka", 20);
+            var studenti2 = new Studenti("Munker", "Tac", 23);
+            var studenti3 = new Studenti("Bleron", "Osmani", 19);
+
+            studentet.Add(studenti1);
+            studentet.Add(studenti2);
+            studentet.Add(studenti3);
+
+            return View(studentet);
         }
 
         public IActionResult ParaqitTopStudentin()

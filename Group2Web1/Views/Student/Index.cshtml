@@ -1,1 +1,8 @@
-﻿<h1>Ku jeni o studentë</h1>
+﻿@model List<Studenti>
+<h1>Ku jeni o studentë</h1>
+
+@foreach (var stud in Model)
+{
+    <h1>@stud.Emri @stud.Mbiemri @stud.Mosha</h1>
+}
+
